@@ -52,12 +52,14 @@ def submit_form():
     # Declarar variáveis para a coleta dos dados
     name = request.form['name']
     email = request.form['email']
+    number_phone = request.form['number_phone']
     address = request.form['address']
     date = request.form['date']
 
     with open('form.txt', 'a') as f:
             f.write(name + '\n')
             f.write(email + '\n')
+            f.write(number_phone + '\n')
             f.write(address + '\n')
             f.write(date + '\n')
             
@@ -66,6 +68,7 @@ def submit_form():
                            # Coloque as variáveis aqui
                            name=name,
                            email=email,
+                           number_phone=number_phone,
                            address=address,
                            date=date
                            )
